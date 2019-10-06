@@ -43,6 +43,27 @@ const AuthStack = createStackNavigator({
   },
 });
 
+const MainTabs = createBottomTabNavigator({
+  Feed: {
+    screen: Example,
+    navigationOptions: {
+      tabBarLabel: 'Feed',
+    },
+  },
+  Search: {
+    screen: Example,
+    navigationOptions: {
+      tabBarLabel: 'Search',
+    },
+  },
+  Discover: {
+    screen: Example,
+    navigationOptions: {
+      tabBarLabel: 'Discover',
+    },
+  },
+});
+
 const App = createSwitchNavigator({
   Loading: {
     screen: Example,
@@ -51,7 +72,7 @@ const App = createSwitchNavigator({
     screen: AuthStack,
   },
   App: {
-    screen: Example,
+    screen: MainTabs,
   },
 });
 
