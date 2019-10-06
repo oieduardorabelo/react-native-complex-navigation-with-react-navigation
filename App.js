@@ -130,6 +130,19 @@ const MainDrawer = createDrawerNavigator({
   Settings: SettingsStack,
 });
 
+const AppModalStack = createStackNavigator(
+  {
+    App: MainDrawer,
+    Promotion1: {
+      screen: Example,
+    },
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none',
+  }
+);
+
 const App = createSwitchNavigator({
   Loading: {
     screen: Example,
@@ -138,9 +151,8 @@ const App = createSwitchNavigator({
     screen: AuthStack,
   },
   App: {
-    screen: MainDrawer,
+    screen: AppModalStack,
   },
 });
-
 
 export default createAppContainer(App);
