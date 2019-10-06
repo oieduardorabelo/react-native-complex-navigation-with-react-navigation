@@ -110,6 +110,26 @@ const MainTabs = createBottomTabNavigator({
 });
 
 
+const SettingsStack = createStackNavigator({
+  SettingsList: {
+    screen: Example,
+    navigationOptions: {
+      headerTitle: 'Settings List',
+    },
+  },
+  Profile: {
+    screen: Example,
+    navigationOptions: {
+      headerTitle: 'Profile',
+    },
+  },
+});
+
+const MainDrawer = createDrawerNavigator({
+  MainTabs: MainTabs,
+  Settings: SettingsStack,
+});
+
 const App = createSwitchNavigator({
   Loading: {
     screen: Example,
@@ -118,8 +138,9 @@ const App = createSwitchNavigator({
     screen: AuthStack,
   },
   App: {
-    screen: MainTabs,
+    screen: MainDrawer,
   },
 });
+
 
 export default createAppContainer(App);
