@@ -1,4 +1,5 @@
 // App.js
+// obrigado a leitura
 import React from 'react';
 import {
   createAppContainer,
