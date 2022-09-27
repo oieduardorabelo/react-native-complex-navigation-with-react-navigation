@@ -1,3 +1,11 @@
+# NOT MAINTAINED
+
+The example in this repository is 3-4 years old. Things changed in the ecosystem.
+
+Take it with a grain of salt 😄
+
+---
+
 # React Native: Complex navigation with React Navigation
 
 Example project for my articles on:
